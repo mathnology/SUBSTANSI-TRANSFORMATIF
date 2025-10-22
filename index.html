@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplikasi Penilaian GTK</title>
+    <title>Penilaian Subtansi GTK Transformatif</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
@@ -15,7 +15,7 @@
     <div class="container mx-auto px-4 py-8 max-w-4xl">
         <header class="text-center mb-8">
             <h1 class="text-3xl font-bold text-indigo-800 mb-2">Aplikasi Penilaian GTK</h1>
-            <p class="text-gray-600">Sistem Penilaian Orisinalitas Karya</p>
+            <p class="text-gray-600">Provinsi Kalimantan Timur</p>
         </header>
 
         <main class="bg-white rounded-lg shadow-lg p-6">
@@ -509,7 +509,243 @@
                 </div>
             </section>
 
+            <!-- Aspek Kebermanfaatan -->
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-800 mb-6">Penilaian Aspek Kebermanfaatan</h2>
+                
+                <!-- Indikator 1 Kebermanfaatan -->
+                <div class="mb-8 border border-gray-200 rounded-lg p-6">
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-indigo-700">Indikator 1 (Bobot: 10)</h3>
+                        <p class="text-gray-600 text-sm mt-1">Memiliki potensi dampak kognisi pada orang lain</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="border border-orange-200 rounded-md p-3 bg-orange-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Menambah pengetahuan</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="kebermanfaatan_ind1_krit1" class="w-4 h-4 text-orange-600 rounded focus:ring-orange-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-orange-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_kebermanfaatan_ind1_krit1" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                        <div class="border border-orange-200 rounded-md p-3 bg-orange-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Menambah pemahaman</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="kebermanfaatan_ind1_krit2" class="w-4 h-4 text-orange-600 rounded focus:ring-orange-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-orange-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_kebermanfaatan_ind1_krit2" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                        <div class="border border-orange-200 rounded-md p-3 bg-orange-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Menambah pengingatan</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="kebermanfaatan_ind1_krit3" class="w-4 h-4 text-orange-600 rounded focus:ring-orange-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-orange-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_kebermanfaatan_ind1_krit3" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                        <div class="border border-orange-200 rounded-md p-3 bg-orange-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Menambah perhatian</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="kebermanfaatan_ind1_krit4" class="w-4 h-4 text-orange-600 rounded focus:ring-orange-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-orange-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_kebermanfaatan_ind1_krit4" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-orange-100 rounded-md">
+                        <span class="text-sm font-medium">Nilai Indikator 1: </span>
+                        <span id="score_kebermanfaatan_ind1" class="text-lg font-bold text-orange-700">0</span>
+                        <span class="text-sm text-gray-600"> / 10</span>
+                    </div>
+                </div>
 
+                <!-- Indikator 2 Kebermanfaatan -->
+                <div class="mb-8 border border-gray-200 rounded-lg p-6">
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-indigo-700">Indikator 2 (Bobot: 10)</h3>
+                        <p class="text-gray-600 text-sm mt-1">Memiliki potensi dampak konasi pada orang lain</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="border border-orange-200 rounded-md p-3 bg-orange-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Dorongan untuk meniru</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="kebermanfaatan_ind2_krit1" class="w-4 h-4 text-orange-600 rounded focus:ring-orange-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-orange-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_kebermanfaatan_ind2_krit1" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                        <div class="border border-orange-200 rounded-md p-3 bg-orange-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Dorongan untuk menjadi kebiasaan</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="kebermanfaatan_ind2_krit2" class="w-4 h-4 text-orange-600 rounded focus:ring-orange-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-orange-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_kebermanfaatan_ind2_krit2" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                        <div class="border border-orange-200 rounded-md p-3 bg-orange-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Dorongan untuk menjadi terlatih</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="kebermanfaatan_ind2_krit3" class="w-4 h-4 text-orange-600 rounded focus:ring-orange-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-orange-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_kebermanfaatan_ind2_krit3" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                        <div class="border border-orange-200 rounded-md p-3 bg-orange-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Dorongan untuk menjadi mahir</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="kebermanfaatan_ind2_krit4" class="w-4 h-4 text-orange-600 rounded focus:ring-orange-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-orange-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_kebermanfaatan_ind2_krit4" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-orange-100 rounded-md">
+                        <span class="text-sm font-medium">Nilai Indikator 2: </span>
+                        <span id="score_kebermanfaatan_ind2" class="text-lg font-bold text-orange-700">0</span>
+                        <span class="text-sm text-gray-600"> / 10</span>
+                    </div>
+                </div>
+
+                <!-- Indikator 3 Kebermanfaatan -->
+                <div class="mb-8 border border-gray-200 rounded-lg p-6">
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-indigo-700">Indikator 3 (Bobot: 10)</h3>
+                        <p class="text-gray-600 text-sm mt-1">Berdampak secara keberlanjutan pada stakeholders</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="border border-orange-200 rounded-md p-3 bg-orange-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Berdampak pada siswa</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="kebermanfaatan_ind3_krit1" class="w-4 h-4 text-orange-600 rounded focus:ring-orange-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-orange-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_kebermanfaatan_ind3_krit1" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                        <div class="border border-orange-200 rounded-md p-3 bg-orange-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Berdampak pada guru sejawat</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="kebermanfaatan_ind3_krit2" class="w-4 h-4 text-orange-600 rounded focus:ring-orange-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-orange-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_kebermanfaatan_ind3_krit2" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                        <div class="border border-orange-200 rounded-md p-3 bg-orange-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Berdampak pada sekolah</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="kebermanfaatan_ind3_krit3" class="w-4 h-4 text-orange-600 rounded focus:ring-orange-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-orange-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_kebermanfaatan_ind3_krit3" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                        <div class="border border-orange-200 rounded-md p-3 bg-orange-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Berdampak pada lingkungan sekitar</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="kebermanfaatan_ind3_krit4" class="w-4 h-4 text-orange-600 rounded focus:ring-orange-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-orange-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_kebermanfaatan_ind3_krit4" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-orange-100 rounded-md">
+                        <span class="text-sm font-medium">Nilai Indikator 3: </span>
+                        <span id="score_kebermanfaatan_ind3" class="text-lg font-bold text-orange-700">0</span>
+                        <span class="text-sm text-gray-600"> / 10</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aspek Literasi Digital -->
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-800 mb-6">Penilaian Aspek Literasi Digital</h2>
+                
+                <!-- Indikator 1 Literasi Digital -->
+                <div class="mb-8 border border-gray-200 rounded-lg p-6">
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-indigo-700">Indikator 1 (Bobot: 10)</h3>
+                        <p class="text-gray-600 text-sm mt-1">Menggunakan teknologi digital (antara lain pemanfaatan Artificial Intelligence/AI, virtual reality/VR, Augmented Reality/AR, dan lain-lain)</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="border border-teal-200 rounded-md p-3 bg-teal-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Melakukan editing video</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="literasi_ind1_krit1" class="w-4 h-4 text-teal-600 rounded focus:ring-teal-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-teal-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_literasi_ind1_krit1" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                        <div class="border border-teal-200 rounded-md p-3 bg-teal-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Menambahkan infografis</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="literasi_ind1_krit2" class="w-4 h-4 text-teal-600 rounded focus:ring-teal-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-teal-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_literasi_ind1_krit2" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                        <div class="border border-teal-200 rounded-md p-3 bg-teal-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Menambahkan animasi</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="literasi_ind1_krit3" class="w-4 h-4 text-teal-600 rounded focus:ring-teal-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-teal-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_literasi_ind1_krit3" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                        <div class="border border-teal-200 rounded-md p-3 bg-teal-50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm font-medium">Menambahkan teks/caption</span>
+                                <div class="flex items-center space-x-2">
+                                    <input type="checkbox" id="literasi_ind1_krit4" class="w-4 h-4 text-teal-600 rounded focus:ring-teal-500" onchange="calculateScore()">
+                                    <span class="text-sm font-medium text-teal-600">2.5 poin</span>
+                                </div>
+                            </div>
+                            <textarea id="keterangan_literasi_ind1_krit4" rows="1" class="w-full px-2 py-1 border border-gray-300 rounded text-xs" placeholder="Keterangan untuk kriteria ini..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-teal-100 rounded-md">
+                        <span class="text-sm font-medium">Nilai Indikator 1: </span>
+                        <span id="score_literasi_ind1" class="text-lg font-bold text-teal-700">0</span>
+                        <span class="text-sm text-gray-600"> / 10</span>
+                    </div>
+                </div>
+            </section>
 
             <!-- Total Score -->
             <section class="mb-8 p-6 bg-gradient-to-r from-purple-100 to-pink-100 rounded-lg">
@@ -517,7 +753,7 @@
                     <h3 class="text-xl font-bold text-purple-800 mb-4">Total Nilai Penilaian GTK</h3>
                     
                     <!-- Aspek Scores -->
-                    <div class="grid md:grid-cols-3 gap-4 mb-6">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
                         <div class="bg-white p-4 rounded-lg shadow">
                             <h4 class="font-semibold text-indigo-700 mb-2">Aspek Orisinalitas</h4>
                             <div class="text-2xl font-bold text-indigo-700" id="totalOrisinalitas">0</div>
@@ -533,11 +769,21 @@
                             <div class="text-2xl font-bold text-indigo-700" id="totalKeselarasan">0</div>
                             <div class="text-sm text-gray-600">dari maksimal 15 poin</div>
                         </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <h4 class="font-semibold text-indigo-700 mb-2">Aspek Kebermanfaatan</h4>
+                            <div class="text-2xl font-bold text-indigo-700" id="totalKebermanfaatan">0</div>
+                            <div class="text-sm text-gray-600">dari maksimal 30 poin</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <h4 class="font-semibold text-indigo-700 mb-2">Aspek Literasi Digital</h4>
+                            <div class="text-2xl font-bold text-indigo-700" id="totalLiterasiDigital">0</div>
+                            <div class="text-sm text-gray-600">dari maksimal 10 poin</div>
+                        </div>
                     </div>
                     
                     <!-- Grand Total -->
                     <div class="text-4xl font-bold text-purple-700" id="totalScore">0</div>
-                    <div class="text-sm text-gray-600 mt-1">dari maksimal 60 poin</div>
+                    <div class="text-sm text-gray-600 mt-1">dari maksimal 100 poin</div>
                     <div class="mt-3">
                         <span class="text-sm font-medium">Persentase: </span>
                         <span id="percentage" class="text-lg font-bold text-purple-700">0%</span>
@@ -650,21 +896,59 @@
             }
             document.getElementById('score_keselarasan_ind3').textContent = keselarasanInd3Score;
 
+            // Calculate Kebermanfaatan scores
+            let kebermanfaatanInd1Score = 0;
+            for (let i = 1; i <= 4; i++) {
+                if (document.getElementById(`kebermanfaatan_ind1_krit${i}`).checked) {
+                    kebermanfaatanInd1Score += 2.5;
+                }
+            }
+            document.getElementById('score_kebermanfaatan_ind1').textContent = kebermanfaatanInd1Score;
+
+            let kebermanfaatanInd2Score = 0;
+            for (let i = 1; i <= 4; i++) {
+                if (document.getElementById(`kebermanfaatan_ind2_krit${i}`).checked) {
+                    kebermanfaatanInd2Score += 2.5;
+                }
+            }
+            document.getElementById('score_kebermanfaatan_ind2').textContent = kebermanfaatanInd2Score;
+
+            let kebermanfaatanInd3Score = 0;
+            for (let i = 1; i <= 4; i++) {
+                if (document.getElementById(`kebermanfaatan_ind3_krit${i}`).checked) {
+                    kebermanfaatanInd3Score += 2.5;
+                }
+            }
+            document.getElementById('score_kebermanfaatan_ind3').textContent = kebermanfaatanInd3Score;
+
+            // Calculate Literasi Digital scores
+            let literasiInd1Score = 0;
+            for (let i = 1; i <= 4; i++) {
+                if (document.getElementById(`literasi_ind1_krit${i}`).checked) {
+                    literasiInd1Score += 2.5;
+                }
+            }
+            document.getElementById('score_literasi_ind1').textContent = literasiInd1Score;
+
             // Calculate total scores per aspect
             const totalOrisinalitas = ind1Score + ind2Score;
             const totalKebaruan = kebaruanInd1Score + kebaruanInd2Score + kebaruanInd3Score;
             const totalKeselarasan = keselarasanInd1Score + keselarasanInd2Score + keselarasanInd3Score;
+            const totalKebermanfaatan = kebermanfaatanInd1Score + kebermanfaatanInd2Score + kebermanfaatanInd3Score;
+            const totalLiterasiDigital = literasiInd1Score;
             
             document.getElementById('totalOrisinalitas').textContent = totalOrisinalitas;
             document.getElementById('totalKebaruan').textContent = totalKebaruan;
             document.getElementById('totalKeselarasan').textContent = totalKeselarasan;
+            document.getElementById('totalKebermanfaatan').textContent = totalKebermanfaatan;
+            document.getElementById('totalLiterasiDigital').textContent = totalLiterasiDigital;
 
             // Calculate grand total score
-            const totalScore = totalOrisinalitas + totalKebaruan + totalKeselarasan;
+            const totalScore = totalOrisinalitas + totalKebaruan + totalKeselarasan + totalKebermanfaatan + totalLiterasiDigital;
             document.getElementById('totalScore').textContent = totalScore;
             
             // Calculate percentage
-            const percentage = Math.round((totalScore / 60) * 100);
+            const percentage = Math.round((totalScore / 100) * 100);
             document.getElementById('percentage').textContent = percentage + '%';
         }
 
@@ -698,6 +982,18 @@
                 document.getElementById(`keterangan_keselarasan_ind3_krit${i}`).value = '';
             }
             
+            // Reset all criteria comments for Kebermanfaatan
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`keterangan_kebermanfaatan_ind1_krit${i}`).value = '';
+                document.getElementById(`keterangan_kebermanfaatan_ind2_krit${i}`).value = '';
+                document.getElementById(`keterangan_kebermanfaatan_ind3_krit${i}`).value = '';
+            }
+            
+            // Reset all criteria comments for Literasi Digital
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`keterangan_literasi_ind1_krit${i}`).value = '';
+            }
+            
             // Reset scores
             calculateScore();
         }
@@ -715,9 +1011,15 @@
             const keselarasanInd1Score = parseFloat(document.getElementById('score_keselarasan_ind1').textContent);
             const keselarasanInd2Score = parseFloat(document.getElementById('score_keselarasan_ind2').textContent);
             const keselarasanInd3Score = parseFloat(document.getElementById('score_keselarasan_ind3').textContent);
+            const kebermanfaatanInd1Score = parseFloat(document.getElementById('score_kebermanfaatan_ind1').textContent);
+            const kebermanfaatanInd2Score = parseFloat(document.getElementById('score_kebermanfaatan_ind2').textContent);
+            const kebermanfaatanInd3Score = parseFloat(document.getElementById('score_kebermanfaatan_ind3').textContent);
+            const literasiInd1Score = parseFloat(document.getElementById('score_literasi_ind1').textContent);
             const totalOrisinalitas = parseFloat(document.getElementById('totalOrisinalitas').textContent);
             const totalKebaruan = parseFloat(document.getElementById('totalKebaruan').textContent);
             const totalKeselarasan = parseFloat(document.getElementById('totalKeselarasan').textContent);
+            const totalKebermanfaatan = parseFloat(document.getElementById('totalKebermanfaatan').textContent);
+            const totalLiterasiDigital = parseFloat(document.getElementById('totalLiterasiDigital').textContent);
             const totalScore = parseFloat(document.getElementById('totalScore').textContent);
             const percentage = document.getElementById('percentage').textContent;
 
@@ -755,129 +1057,22 @@
                                 <p><strong>Indikator 3:</strong> ${keselarasanInd3Score} / 5 poin</p>
                             </div>
                         </div>
+                        <div class="bg-orange-50 p-3 rounded">
+                            <p class="font-medium text-orange-800 mb-2">Aspek Kebermanfaatan: ${totalKebermanfaatan} / 30 poin</p>
+                            <div class="ml-4 space-y-1">
+                                <p><strong>Indikator 1:</strong> ${kebermanfaatanInd1Score} / 10 poin</p>
+                                <p><strong>Indikator 2:</strong> ${kebermanfaatanInd2Score} / 10 poin</p>
+                                <p><strong>Indikator 3:</strong> ${kebermanfaatanInd3Score} / 10 poin</p>
+                            </div>
+                        </div>
+                        <div class="bg-teal-50 p-3 rounded">
+                            <p class="font-medium text-teal-800 mb-2">Aspek Literasi Digital: ${totalLiterasiDigital} / 10 poin</p>
+                            <div class="ml-4 space-y-1">
+                                <p><strong>Indikator 1:</strong> ${literasiInd1Score} / 10 poin</p>
+                            </div>
+                        </div>
                         <div class="bg-purple-50 p-3 rounded">
-                            <p class="text-lg"><strong>Total Nilai:</strong> ${totalScore} / 60 poin (${percentage})</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold text-lg mb-2">Detail Kriteria dan Keterangan</h4>
-                    <div class="space-y-4">
-                        <div>
-                            <p class="font-medium mb-2 text-indigo-800">Aspek Orisinalitas</p>
-                            <div class="ml-4 space-y-3">
-                                <div>
-                                    <p class="font-medium text-sm mb-1">Indikator 1:</p>
-                                    <div class="ml-4 space-y-2">
-                                        <div class="bg-blue-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('ind1_krit1').checked ? '✓' : '✗'} Karya merupakan gagasan sendiri</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_ind1_krit1').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-blue-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('ind1_krit2').checked ? '✓' : '✗'} Media dibuat sendiri</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_ind1_krit2').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-blue-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('ind1_krit3').checked ? '✓' : '✗'} Diterapkan sesuai tugas dan fungsinya</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_ind1_krit3').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-blue-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('ind1_krit4').checked ? '✓' : '✗'} Sesuai konten yang dipilih</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_ind1_krit4').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="font-medium text-sm mb-1">Indikator 2:</p>
-                                    <div class="ml-4 space-y-2">
-                                        <div class="bg-blue-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('ind2_krit1').checked ? '✓' : '✗'} Alur cerita relevan dengan isi naskah</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_ind2_krit1').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-blue-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('ind2_krit2').checked ? '✓' : '✗'} Alur cerita terstruktur</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_ind2_krit2').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-blue-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('ind2_krit3').checked ? '✓' : '✗'} Alur cerita menarik</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_ind2_krit3').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-blue-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('ind2_krit4').checked ? '✓' : '✗'} Alur cerita menyenangkan</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_ind2_krit4').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="font-medium mb-2 text-purple-800">Aspek Kebaruan</p>
-                            <div class="ml-4 space-y-3">
-                                <div>
-                                    <p class="font-medium text-sm mb-1">Indikator 1:</p>
-                                    <div class="ml-4 space-y-2">
-                                        <div class="bg-purple-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('kebaruan_ind1_krit1').checked ? '✓' : '✗'} Memberi solusi baru terhadap masalah/inovasi pembelajaran dan/atau pengelolaan satuan pendidikan</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind1_krit1').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-purple-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('kebaruan_ind1_krit2').checked ? '✓' : '✗'} Mudah digunakan</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind1_krit2').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-purple-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('kebaruan_ind1_krit3').checked ? '✓' : '✗'} Sederhana dan dapat diadaptasi</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind1_krit3').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-purple-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('kebaruan_ind1_krit4').checked ? '✓' : '✗'} Menggunakan sumber daya lokal</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind1_krit4').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="font-medium text-sm mb-1">Indikator 2:</p>
-                                    <div class="ml-4 space-y-2">
-                                        <div class="bg-purple-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('kebaruan_ind2_krit1').checked ? '✓' : '✗'} Pemecahan masalah berbasis data</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind2_krit1').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-purple-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('kebaruan_ind2_krit2').checked ? '✓' : '✗'} Ide/gagasan/produk/proses tepat sesuai permasalahan yang ada</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind2_krit2').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-purple-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('kebaruan_ind2_krit3').checked ? '✓' : '✗'} Implementasi ide/gagasan/produk/proses dilakukan secara tepat</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind2_krit3').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-purple-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('kebaruan_ind2_krit4').checked ? '✓' : '✗'} Memiliki refleksi dan umpan balik terhadap ide/gagasan/proses/produk</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind2_krit4').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="font-medium text-sm mb-1">Indikator 3:</p>
-                                    <div class="ml-4 space-y-2">
-                                        <div class="bg-purple-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('kebaruan_ind3_krit1').checked ? '✓' : '✗'} Kolaborasi dan komunikasi dengan pihak eksternal</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind3_krit1').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-purple-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('kebaruan_ind3_krit2').checked ? '✓' : '✗'} Kolaborasi dan komunikasi dengan pihak internal</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind3_krit2').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-purple-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('kebaruan_ind3_krit3').checked ? '✓' : '✗'} Saling menghargai</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind3_krit3').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                        <div class="bg-purple-50 p-2 rounded text-sm">
-                                            <p>${document.getElementById('kebaruan_ind3_krit4').checked ? '✓' : '✗'} Budaya belajar berbagi</p>
-                                            <p class="text-xs text-gray-600 mt-1"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind3_krit4').value || 'Tidak ada keterangan'}</em></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <p class="text-lg"><strong>Total Nilai:</strong> ${totalScore} / 100 poin (${percentage})</p>
                         </div>
                     </div>
                 </div>
@@ -906,11 +1101,213 @@
             const keselarasanInd1Score = parseFloat(document.getElementById('score_keselarasan_ind1').textContent);
             const keselarasanInd2Score = parseFloat(document.getElementById('score_keselarasan_ind2').textContent);
             const keselarasanInd3Score = parseFloat(document.getElementById('score_keselarasan_ind3').textContent);
+            const kebermanfaatanInd1Score = parseFloat(document.getElementById('score_kebermanfaatan_ind1').textContent);
+            const kebermanfaatanInd2Score = parseFloat(document.getElementById('score_kebermanfaatan_ind2').textContent);
+            const kebermanfaatanInd3Score = parseFloat(document.getElementById('score_kebermanfaatan_ind3').textContent);
+            const literasiInd1Score = parseFloat(document.getElementById('score_literasi_ind1').textContent);
             const totalOrisinalitas = parseFloat(document.getElementById('totalOrisinalitas').textContent);
             const totalKebaruan = parseFloat(document.getElementById('totalKebaruan').textContent);
             const totalKeselarasan = parseFloat(document.getElementById('totalKeselarasan').textContent);
+            const totalKebermanfaatan = parseFloat(document.getElementById('totalKebermanfaatan').textContent);
+            const totalLiterasiDigital = parseFloat(document.getElementById('totalLiterasiDigital').textContent);
             const totalScore = parseFloat(document.getElementById('totalScore').textContent);
             const percentage = document.getElementById('percentage').textContent;
+
+            // Function to generate detailed criteria report
+            function generateCriteriaDetails(aspectName, indicators) {
+                let html = `<h4>${aspectName}</h4>`;
+                
+                indicators.forEach((indicator, indIndex) => {
+                    html += `<div class="indicator-section">`;
+                    html += `<h5>Indikator ${indIndex + 1} (${indicator.score} / ${indicator.maxScore} poin)</h5>`;
+                    html += `<p class="indicator-desc">${indicator.description}</p>`;
+                    
+                    indicator.criteria.forEach((criteria, critIndex) => {
+                        const isChecked = document.getElementById(criteria.id).checked;
+                        const keterangan = document.getElementById(criteria.keteranganId).value;
+                        const status = isChecked ? '✓' : '✗';
+                        const statusClass = isChecked ? 'checked' : 'unchecked';
+                        
+                        html += `<div class="criteria-item ${statusClass}">`;
+                        html += `<p><span class="status">${status}</span> ${criteria.text} <span class="points">(${criteria.points} poin)</span></p>`;
+                        if (keterangan.trim()) {
+                            html += `<p class="keterangan"><strong>Keterangan:</strong> ${keterangan}</p>`;
+                        }
+                        html += `</div>`;
+                    });
+                    
+                    html += `</div>`;
+                });
+                
+                return html;
+            }
+
+            // Define all criteria data
+            const aspectsData = [
+                {
+                    name: "ASPEK ORISINALITAS",
+                    indicators: [
+                        {
+                            score: ind1Score,
+                            maxScore: 10,
+                            description: "Memuat karya asli penerapan nyata di Satuan Pendidikannya terkait dengan konten yang dipilih dan sesuai tugas dan fungsi",
+                            criteria: [
+                                { id: 'ind1_krit1', keteranganId: 'keterangan_ind1_krit1', text: 'Karya merupakan gagasan sendiri', points: '2.5' },
+                                { id: 'ind1_krit2', keteranganId: 'keterangan_ind1_krit2', text: 'Media dibuat sendiri', points: '2.5' },
+                                { id: 'ind1_krit3', keteranganId: 'keterangan_ind1_krit3', text: 'Diterapkan sesuai tugas dan fungsinya', points: '2.5' },
+                                { id: 'ind1_krit4', keteranganId: 'keterangan_ind1_krit4', text: 'Sesuai konten yang dipilih', points: '2.5' }
+                            ]
+                        },
+                        {
+                            score: ind2Score,
+                            maxScore: 10,
+                            description: "Memiliki alur cerita/narasi dalam naskah yang divisualisasikan dalam video secara terstruktur, menarik, dan menyenangkan",
+                            criteria: [
+                                { id: 'ind2_krit1', keteranganId: 'keterangan_ind2_krit1', text: 'Alur cerita relevan dengan isi naskah', points: '2.5' },
+                                { id: 'ind2_krit2', keteranganId: 'keterangan_ind2_krit2', text: 'Alur cerita terstruktur', points: '2.5' },
+                                { id: 'ind2_krit3', keteranganId: 'keterangan_ind2_krit3', text: 'Alur cerita menarik', points: '2.5' },
+                                { id: 'ind2_krit4', keteranganId: 'keterangan_ind2_krit4', text: 'Alur cerita menyenangkan', points: '2.5' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "ASPEK KEBARUAN",
+                    indicators: [
+                        {
+                            score: kebaruanInd1Score,
+                            maxScore: 10,
+                            description: "Menghadirkan ide, pendekatan, strategi, metode atau inovasi baru untuk penyelesaian masalah, pemenuhan kebutuhan, pengembangan kualitas layanan (pembelajaran atau pengelolaan satuan pendidikan)",
+                            criteria: [
+                                { id: 'kebaruan_ind1_krit1', keteranganId: 'keterangan_kebaruan_ind1_krit1', text: 'Memberi solusi baru terhadap masalah/inovasi pembelajaran dan/atau pengelolaan satuan pendidikan', points: '2.5' },
+                                { id: 'kebaruan_ind1_krit2', keteranganId: 'keterangan_kebaruan_ind1_krit2', text: 'Mudah digunakan', points: '2.5' },
+                                { id: 'kebaruan_ind1_krit3', keteranganId: 'keterangan_kebaruan_ind1_krit3', text: 'Sederhana dan dapat diadaptasi', points: '2.5' },
+                                { id: 'kebaruan_ind1_krit4', keteranganId: 'keterangan_kebaruan_ind1_krit4', text: 'Menggunakan sumber daya lokal', points: '2.5' }
+                            ]
+                        },
+                        {
+                            score: kebaruanInd2Score,
+                            maxScore: 10,
+                            description: "Memuat pemecahan masalah dalam implementasi dan refleksi",
+                            criteria: [
+                                { id: 'kebaruan_ind2_krit1', keteranganId: 'keterangan_kebaruan_ind2_krit1', text: 'Pemecahan masalah berbasis data', points: '2.5' },
+                                { id: 'kebaruan_ind2_krit2', keteranganId: 'keterangan_kebaruan_ind2_krit2', text: 'Ide/gagasan/produk/proses tepat sesuai permasalahan yang ada', points: '2.5' },
+                                { id: 'kebaruan_ind2_krit3', keteranganId: 'keterangan_kebaruan_ind2_krit3', text: 'Implementasi ide/gagasan/produk/proses dilakukan secara tepat', points: '2.5' },
+                                { id: 'kebaruan_ind2_krit4', keteranganId: 'keterangan_kebaruan_ind2_krit4', text: 'Memiliki refleksi dan umpan balik terhadap ide/gagasan/proses/produk', points: '2.5' }
+                            ]
+                        },
+                        {
+                            score: kebaruanInd3Score,
+                            maxScore: 5,
+                            description: "Memuat Kolaborasi dan komunikasi yang mendorong belajar budaya berbagi",
+                            criteria: [
+                                { id: 'kebaruan_ind3_krit1', keteranganId: 'keterangan_kebaruan_ind3_krit1', text: 'Kolaborasi dan komunikasi dengan pihak eksternal', points: '1.25' },
+                                { id: 'kebaruan_ind3_krit2', keteranganId: 'keterangan_kebaruan_ind3_krit2', text: 'Kolaborasi dan komunikasi dengan pihak internal', points: '1.25' },
+                                { id: 'kebaruan_ind3_krit3', keteranganId: 'keterangan_kebaruan_ind3_krit3', text: 'Saling menghargai', points: '1.25' },
+                                { id: 'kebaruan_ind3_krit4', keteranganId: 'keterangan_kebaruan_ind3_krit4', text: 'Budaya belajar berbagi', points: '1.25' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "ASPEK KESELARASAN DENGAN PROGRAM PRIORITAS KEMENTERIAN",
+                    indicators: [
+                        {
+                            score: keselarasanInd1Score,
+                            maxScore: 5,
+                            description: "Menunjukkan keteladanan karakter yang baik melalui 7 Kebiasaan Anak Indonesia Hebat",
+                            criteria: [
+                                { id: 'keselarasan_ind1_krit1', keteranganId: 'keterangan_keselarasan_ind1_krit1', text: 'Menunjukkan keteladanan dalam keterpaduan penerapan tujuh kebiasaan (bangun pagi, beribadah, berolahraga, makan sehat, gemar belajar, bermasyarakat, tidur cepat) dalam praktik pembelajaran/lingkungan sekolah', points: '1.25' },
+                                { id: 'keselarasan_ind1_krit2', keteranganId: 'keterangan_keselarasan_ind1_krit2', text: 'Memberikan contoh nyata pembiasaan yang konsisten di sekolah maupun kelas', points: '1.25' },
+                                { id: 'keselarasan_ind1_krit3', keteranganId: 'keterangan_keselarasan_ind1_krit3', text: 'Menghasilkan perubahan perilaku positif siswa yang terukur', points: '1.25' },
+                                { id: 'keselarasan_ind1_krit4', keteranganId: 'keterangan_keselarasan_ind1_krit4', text: 'Memberikan pengaruh luas pada budaya sekolah dan lingkungan sekitar', points: '1.25' }
+                            ]
+                        },
+                        {
+                            score: keselarasanInd2Score,
+                            maxScore: 5,
+                            description: "Mengimplementasikan Pembelajaran Mendalam",
+                            criteria: [
+                                { id: 'keselarasan_ind2_krit1', keteranganId: 'keterangan_keselarasan_ind2_krit1', text: 'Mengembangkan pembelajaran berbasis eksplorasi, refleksi, dan penalaran mendalam', points: '1.25' },
+                                { id: 'keselarasan_ind2_krit2', keteranganId: 'keterangan_keselarasan_ind2_krit2', text: 'Menghubungkan konsep dengan kehidupan nyata siswa serta lintas disiplin', points: '1.25' },
+                                { id: 'keselarasan_ind2_krit3', keteranganId: 'keterangan_keselarasan_ind2_krit3', text: 'Memfasilitasi siswa untuk berpikir kritis, kreatif, dan mampu memecahkan masalah', points: '1.25' },
+                                { id: 'keselarasan_ind2_krit4', keteranganId: 'keterangan_keselarasan_ind2_krit4', text: 'Menghasilkan pemahaman konseptual dan produk belajar yang menunjukkan makna dan relevansi', points: '1.25' }
+                            ]
+                        },
+                        {
+                            score: keselarasanInd3Score,
+                            maxScore: 5,
+                            description: "Mengembangkan kemampuan Literasi dan Numerasi",
+                            criteria: [
+                                { id: 'keselarasan_ind3_krit1', keteranganId: 'keterangan_keselarasan_ind3_krit1', text: 'Mengintegrasikan literasi membaca dan menulis secara sistematis, berkesinambungan dan kontekstual dalam setiap mata pelajaran/kegiatan', points: '1.25' },
+                                { id: 'keselarasan_ind3_krit2', keteranganId: 'keterangan_keselarasan_ind3_krit2', text: 'Menggunakan numerasi (data, angka, representasi matematis) secara kontekstual dalam setiap mata pelajaran/kegiatan', points: '1.25' },
+                                { id: 'keselarasan_ind3_krit3', keteranganId: 'keterangan_keselarasan_ind3_krit3', text: 'Memanfaatkan media, teknologi, atau metode inovatif untuk mendukung literasi dan numerasi', points: '1.25' },
+                                { id: 'keselarasan_ind3_krit4', keteranganId: 'keterangan_keselarasan_ind3_krit4', text: 'Memberikan dampak nyata pada peningkatan keterampilan literasi dan numerasi siswa', points: '1.25' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "ASPEK KEBERMANFAATAN",
+                    indicators: [
+                        {
+                            score: kebermanfaatanInd1Score,
+                            maxScore: 10,
+                            description: "Memiliki potensi dampak kognisi pada orang lain",
+                            criteria: [
+                                { id: 'kebermanfaatan_ind1_krit1', keteranganId: 'keterangan_kebermanfaatan_ind1_krit1', text: 'Menambah pengetahuan', points: '2.5' },
+                                { id: 'kebermanfaatan_ind1_krit2', keteranganId: 'keterangan_kebermanfaatan_ind1_krit2', text: 'Menambah pemahaman', points: '2.5' },
+                                { id: 'kebermanfaatan_ind1_krit3', keteranganId: 'keterangan_kebermanfaatan_ind1_krit3', text: 'Menambah pengingatan', points: '2.5' },
+                                { id: 'kebermanfaatan_ind1_krit4', keteranganId: 'keterangan_kebermanfaatan_ind1_krit4', text: 'Menambah perhatian', points: '2.5' }
+                            ]
+                        },
+                        {
+                            score: kebermanfaatanInd2Score,
+                            maxScore: 10,
+                            description: "Memiliki potensi dampak konasi pada orang lain",
+                            criteria: [
+                                { id: 'kebermanfaatan_ind2_krit1', keteranganId: 'keterangan_kebermanfaatan_ind2_krit1', text: 'Dorongan untuk meniru', points: '2.5' },
+                                { id: 'kebermanfaatan_ind2_krit2', keteranganId: 'keterangan_kebermanfaatan_ind2_krit2', text: 'Dorongan untuk menjadi kebiasaan', points: '2.5' },
+                                { id: 'kebermanfaatan_ind2_krit3', keteranganId: 'keterangan_kebermanfaatan_ind2_krit3', text: 'Dorongan untuk menjadi terlatih', points: '2.5' },
+                                { id: 'kebermanfaatan_ind2_krit4', keteranganId: 'keterangan_kebermanfaatan_ind2_krit4', text: 'Dorongan untuk menjadi mahir', points: '2.5' }
+                            ]
+                        },
+                        {
+                            score: kebermanfaatanInd3Score,
+                            maxScore: 10,
+                            description: "Berdampak secara keberlanjutan pada stakeholders",
+                            criteria: [
+                                { id: 'kebermanfaatan_ind3_krit1', keteranganId: 'keterangan_kebermanfaatan_ind3_krit1', text: 'Berdampak pada siswa', points: '2.5' },
+                                { id: 'kebermanfaatan_ind3_krit2', keteranganId: 'keterangan_kebermanfaatan_ind3_krit2', text: 'Berdampak pada guru sejawat', points: '2.5' },
+                                { id: 'kebermanfaatan_ind3_krit3', keteranganId: 'keterangan_kebermanfaatan_ind3_krit3', text: 'Berdampak pada sekolah', points: '2.5' },
+                                { id: 'kebermanfaatan_ind3_krit4', keteranganId: 'keterangan_kebermanfaatan_ind3_krit4', text: 'Berdampak pada lingkungan sekitar', points: '2.5' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "ASPEK LITERASI DIGITAL",
+                    indicators: [
+                        {
+                            score: literasiInd1Score,
+                            maxScore: 10,
+                            description: "Menggunakan teknologi digital (antara lain pemanfaatan Artificial Intelligence/AI, virtual reality/VR, Augmented Reality/AR, dan lain-lain)",
+                            criteria: [
+                                { id: 'literasi_ind1_krit1', keteranganId: 'keterangan_literasi_ind1_krit1', text: 'Melakukan editing video', points: '2.5' },
+                                { id: 'literasi_ind1_krit2', keteranganId: 'keterangan_literasi_ind1_krit2', text: 'Menambahkan infografis', points: '2.5' },
+                                { id: 'literasi_ind1_krit3', keteranganId: 'keterangan_literasi_ind1_krit3', text: 'Menambahkan animasi', points: '2.5' },
+                                { id: 'literasi_ind1_krit4', keteranganId: 'keterangan_literasi_ind1_krit4', text: 'Menambahkan teks/caption', points: '2.5' }
+                            ]
+                        }
+                    ]
+                }
+            ];
+
+            // Generate detailed criteria HTML
+            let detailedCriteriaHTML = '';
+            aspectsData.forEach(aspect => {
+                detailedCriteriaHTML += generateCriteriaDetails(aspect.name, aspect.indicators);
+            });
 
             const printContent = `
                 <!DOCTYPE html>
@@ -927,41 +1324,48 @@
                             font-family: 'Times New Roman', serif; 
                             margin: 0; 
                             padding: 20px;
-                            line-height: 1.6; 
-                            font-size: 12pt;
+                            line-height: 1.4; 
+                            font-size: 10pt;
                             color: #000;
                         }
                         .header { 
                             text-align: center; 
-                            margin-bottom: 30px; 
+                            margin-bottom: 20px; 
                             border-bottom: 3px solid #000; 
                             padding-bottom: 15px; 
                         }
                         .header h1 { 
-                            font-size: 18pt; 
+                            font-size: 16pt; 
                             font-weight: bold; 
                             margin: 0 0 5px 0;
                         }
                         .header h2 { 
-                            font-size: 14pt; 
+                            font-size: 12pt; 
                             font-weight: normal; 
                             margin: 0;
                         }
                         .section { 
-                            margin-bottom: 25px; 
+                            margin-bottom: 20px; 
                             page-break-inside: avoid;
                         }
                         .section h3 { 
-                            font-size: 14pt; 
+                            font-size: 12pt; 
                             font-weight: bold; 
                             margin-bottom: 10px;
                             border-bottom: 1px solid #000;
                             padding-bottom: 5px;
                         }
                         .section h4 { 
-                            font-size: 12pt; 
+                            font-size: 11pt; 
                             font-weight: bold; 
-                            margin: 15px 0 5px 0;
+                            margin: 15px 0 8px 0;
+                            color: #333;
+                        }
+                        .section h5 { 
+                            font-size: 10pt; 
+                            font-weight: bold; 
+                            margin: 10px 0 5px 0;
+                            color: #555;
                         }
                         .identity-table { 
                             width: 100%; 
@@ -971,35 +1375,78 @@
                         .identity-table td { 
                             padding: 5px; 
                             border: 1px solid #000;
+                            font-size: 10pt;
                         }
                         .identity-table td:first-child { 
                             width: 25%; 
                             font-weight: bold;
                         }
                         .score-box { 
-                            border: 2px solid #000; 
-                            padding: 15px; 
-                            margin: 10px 0; 
+                            border: 1px solid #000; 
+                            padding: 10px; 
+                            margin: 8px 0; 
                             background: #f9f9f9;
-                        }
-                        .criteria { 
-                            margin-left: 20px; 
-                            margin-top: 10px;
-                        }
-                        .criteria p { 
-                            margin: 5px 0; 
                         }
                         .total-score { 
                             border: 3px solid #000; 
-                            padding: 20px; 
+                            padding: 15px; 
                             text-align: center; 
-                            font-size: 16pt; 
+                            font-size: 14pt; 
                             font-weight: bold; 
                             background: #f0f0f0;
-                            margin: 20px 0;
+                            margin: 15px 0;
+                        }
+                        .indicator-section {
+                            margin-bottom: 15px;
+                            border: 1px solid #ccc;
+                            padding: 10px;
+                            background: #fafafa;
+                        }
+                        .indicator-desc {
+                            font-style: italic;
+                            margin-bottom: 10px;
+                            color: #666;
+                            font-size: 9pt;
+                        }
+                        .criteria-item {
+                            margin: 5px 0;
+                            padding: 5px;
+                            border-left: 3px solid #ddd;
+                            background: #fff;
+                        }
+                        .criteria-item.checked {
+                            border-left-color: #28a745;
+                            background: #f8fff8;
+                        }
+                        .criteria-item.unchecked {
+                            border-left-color: #dc3545;
+                            background: #fff8f8;
+                        }
+                        .status {
+                            font-weight: bold;
+                            font-size: 12pt;
+                            margin-right: 8px;
+                        }
+                        .criteria-item.checked .status {
+                            color: #28a745;
+                        }
+                        .criteria-item.unchecked .status {
+                            color: #dc3545;
+                        }
+                        .points {
+                            font-weight: bold;
+                            color: #007bff;
+                        }
+                        .keterangan {
+                            margin-top: 5px;
+                            padding: 5px;
+                            background: #e9ecef;
+                            border-radius: 3px;
+                            font-size: 9pt;
+                            font-style: italic;
                         }
                         .signature-section {
-                            margin-top: 40px;
+                            margin-top: 30px;
                             display: flex;
                             justify-content: space-between;
                         }
@@ -1009,7 +1456,7 @@
                         }
                         .signature-line {
                             border-bottom: 1px solid #000;
-                            height: 60px;
+                            height: 50px;
                             margin-bottom: 5px;
                         }
                         @media print { 
@@ -1026,7 +1473,7 @@
                 <body>
                     <div class="header">
                         <h1>LAPORAN PENILAIAN GTK</h1>
-                        <h2>Aspek Orisinalitas</h2>
+                        <h2>Sistem Penilaian Orisinalitas Karya</h2>
                     </div>
                     
                     <div class="section">
@@ -1057,136 +1504,23 @@
                     </div>
                     
                     <div class="section">
-                        <h3>HASIL PENILAIAN</h3>
-                        <h4>Aspek Orisinalitas: ${totalOrisinalitas} / 20 poin</h4>
+                        <h3>RINGKASAN HASIL PENILAIAN</h3>
                         <div class="score-box">
-                            <p><strong>Indikator 1:</strong> ${ind1Score} / 10 poin</p>
-                            <p><strong>Deskripsi:</strong> Memuat karya asli penerapan nyata di Satuan Pendidikannya terkait dengan konten yang dipilih dan sesuai tugas dan fungsi</p>
-                        </div>
-                        <div class="score-box">
-                            <p><strong>Indikator 2:</strong> ${ind2Score} / 10 poin</p>
-                            <p><strong>Deskripsi:</strong> Memiliki alur cerita/narasi dalam naskah yang divisualisasikan dalam video secara terstruktur, menarik, dan menyenangkan</p>
-                        </div>
-                        
-                        <h4>Aspek Kebaruan: ${totalKebaruan} / 25 poin</h4>
-                        <div class="score-box">
-                            <p><strong>Indikator 1:</strong> ${kebaruanInd1Score} / 10 poin</p>
-                            <p><strong>Deskripsi:</strong> Menghadirkan ide, pendekatan, strategi, metode atau inovasi baru untuk penyelesaian masalah, pemenuhan kebutuhan, pengembangan kualitas layanan</p>
-                        </div>
-                        <div class="score-box">
-                            <p><strong>Indikator 2:</strong> ${kebaruanInd2Score} / 10 poin</p>
-                            <p><strong>Deskripsi:</strong> Memuat pemecahan masalah dalam implementasi dan refleksi</p>
-                        </div>
-                        <div class="score-box">
-                            <p><strong>Indikator 3:</strong> ${kebaruanInd3Score} / 5 poin</p>
-                            <p><strong>Deskripsi:</strong> Memuat Kolaborasi dan komunikasi yang mendorong belajar budaya berbagi</p>
+                            <p><strong>Aspek Orisinalitas:</strong> ${totalOrisinalitas} / 20 poin</p>
+                            <p><strong>Aspek Kebaruan:</strong> ${totalKebaruan} / 25 poin</p>
+                            <p><strong>Aspek Keselarasan:</strong> ${totalKeselarasan} / 15 poin</p>
+                            <p><strong>Aspek Kebermanfaatan:</strong> ${totalKebermanfaatan} / 30 poin</p>
+                            <p><strong>Aspek Literasi Digital:</strong> ${totalLiterasiDigital} / 10 poin</p>
                         </div>
                         
                         <div class="total-score">
-                            TOTAL NILAI: ${totalScore} / 45 poin (${percentage})
+                            TOTAL NILAI: ${totalScore} / 100 poin (${percentage})
                         </div>
                     </div>
-                    
+
                     <div class="section">
-                        <h3>DETAIL KRITERIA DAN KETERANGAN</h3>
-                        <h4>ASPEK ORISINALITAS</h4>
-                        <h4>Indikator 1 - Karya Asli dan Penerapan</h4>
-                        <div class="criteria">
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('ind1_krit1').checked ? '✓' : '✗'} Karya merupakan gagasan sendiri (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_ind1_krit1').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('ind1_krit2').checked ? '✓' : '✗'} Media dibuat sendiri (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_ind1_krit2').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('ind1_krit3').checked ? '✓' : '✗'} Diterapkan sesuai tugas dan fungsinya (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_ind1_krit3').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('ind1_krit4').checked ? '✓' : '✗'} Sesuai konten yang dipilih (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_ind1_krit4').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                        </div>
-                        <h4>Indikator 2 - Alur Cerita dan Visualisasi</h4>
-                        <div class="criteria">
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('ind2_krit1').checked ? '✓' : '✗'} Alur cerita relevan dengan isi naskah (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_ind2_krit1').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('ind2_krit2').checked ? '✓' : '✗'} Alur cerita terstruktur (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_ind2_krit2').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('ind2_krit3').checked ? '✓' : '✗'} Alur cerita menarik (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_ind2_krit3').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('ind2_krit4').checked ? '✓' : '✗'} Alur cerita menyenangkan (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_ind2_krit4').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                        </div>
-                        
-                        <h4>ASPEK KEBARUAN</h4>
-                        <h4>Indikator 1 - Inovasi dan Solusi Baru</h4>
-                        <div class="criteria">
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('kebaruan_ind1_krit1').checked ? '✓' : '✗'} Memberi solusi baru terhadap masalah/inovasi pembelajaran dan/atau pengelolaan satuan pendidikan (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind1_krit1').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('kebaruan_ind1_krit2').checked ? '✓' : '✗'} Mudah digunakan (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind1_krit2').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('kebaruan_ind1_krit3').checked ? '✓' : '✗'} Sederhana dan dapat diadaptasi (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind1_krit3').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('kebaruan_ind1_krit4').checked ? '✓' : '✗'} Menggunakan sumber daya lokal (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind1_krit4').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                        </div>
-                        <h4>Indikator 2 - Pemecahan Masalah dan Implementasi</h4>
-                        <div class="criteria">
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('kebaruan_ind2_krit1').checked ? '✓' : '✗'} Pemecahan masalah berbasis data (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind2_krit1').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('kebaruan_ind2_krit2').checked ? '✓' : '✗'} Ide/gagasan/produk/proses tepat sesuai permasalahan yang ada (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind2_krit2').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('kebaruan_ind2_krit3').checked ? '✓' : '✗'} Implementasi ide/gagasan/produk/proses dilakukan secara tepat (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind2_krit3').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('kebaruan_ind2_krit4').checked ? '✓' : '✗'} Memiliki refleksi dan umpan balik terhadap ide/gagasan/proses/produk (2.5 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind2_krit4').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                        </div>
-                        <h4>Indikator 3 - Kolaborasi dan Komunikasi</h4>
-                        <div class="criteria">
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('kebaruan_ind3_krit1').checked ? '✓' : '✗'} Kolaborasi dan komunikasi dengan pihak eksternal (1.25 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind3_krit1').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('kebaruan_ind3_krit2').checked ? '✓' : '✗'} Kolaborasi dan komunikasi dengan pihak internal (1.25 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind3_krit2').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('kebaruan_ind3_krit3').checked ? '✓' : '✗'} Saling menghargai (1.25 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind3_krit3').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                            <div style="margin-bottom: 10px; padding: 8px; border: 1px solid #ccc; background: #f9f9f9;">
-                                <p><strong>${document.getElementById('kebaruan_ind3_krit4').checked ? '✓' : '✗'} Budaya belajar berbagi (1.25 poin)</strong></p>
-                                <p style="font-size: 10pt; color: #666; margin-top: 3px;"><em>Keterangan: ${document.getElementById('keterangan_kebaruan_ind3_krit4').value || 'Tidak ada keterangan'}</em></p>
-                            </div>
-                        </div>
+                        <h3>DETAIL PENILAIAN PER KRITERIA</h3>
+                        ${detailedCriteriaHTML}
                     </div>
 
                     <div class="signature-section">
@@ -1218,5 +1552,5 @@
         // Initialize scores on page load
         calculateScore();
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'992cc1e664f7fdc6',t:'MTc2MTE3NTU2My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'992ccfff3589fdc6',t:'MTc2MTE3NjE0MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
